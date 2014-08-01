@@ -19,3 +19,8 @@ template '/etc/apt/apt.conf.d/20auto-upgrades' do
 	mode '0644'
 	source '20auto-upgrades.erb'
 end
+
+execute "unattended-upgrade" do
+  command "unattended-upgrade"
+  ignore_failure true
+end
